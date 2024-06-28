@@ -1,0 +1,1734 @@
+{
+	"info": {
+		"_postman_id": "e688cb4f-a3c9-4acb-93d6-313a49212526",
+		"name": "Glow&GoAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33163806"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"name\": \"ayhagga\",\r\n        \"email\": \"ayhagga@gmail.com\",\r\n        \"password\": \"489\",\r\n        \"confirmPass\":\"489\",\r\n        \"phone\":\"01044569951\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/user/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"email\": \"reehany@gmail.com\",\r\n        \"password\": \"123\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/user/findUser?userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"findUser"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/user/deleteUser?userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"deleteUser"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"name\": \"rere\",\r\n        \"email\": \"Reham@gmail.com\",\r\n        \"password\": \"400\",\r\n        \"phone\":\"01044569571\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/user/updateProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"updateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyEmailAndSendCode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"lomagemii81@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/user/checkEmail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"checkEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rehamhany01@gmail.com\",\r\n    \"code\":\"97c4a2b7-6dc9-43e6-a54f-1b22570eb030\",\r\n    \"password\":\"500\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/user/resetPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/HP 450 G6/Downloads/door.jpg"
+								},
+								{
+									"key": "email",
+									"value": "rehamhany01@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/user/image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"image"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "feelings",
+			"item": [
+				{
+					"name": "AddFeeling",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"hate\",\r\n    \"description\":\"fgfddss\",\r\n    \"advice\":[\"bbbbvvc\",\"hhgfffd\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/feelings/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"feelings",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteFeeling",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/feelings/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"feelings",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateFeelings",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/feelings/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"feelings",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findFeelingById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/feelings/findfeeling",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"feelings",
+								"findfeeling"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchFeelings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/feelings/searchByName",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"feelings",
+								"searchByName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllFeelings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/feelings/findAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"feelings",
+								"findAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllFUser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZWhhbUBnbWFpbC5jb20iLCJleHAiOjE3MTkyNTkyMzYsImlhdCI6MTcxOTI0ODQzNn0.3eBSmI3E-CqJRdXCNN6lZGK_BC0t0t-q8tUn2q5Qivw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/feelings/findAllFUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"feelings",
+								"findAllFUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "setUserToFeel",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZWhhbUBnbWFpbC5jb20iLCJleHAiOjE3MTkyNTkyMzYsImlhdCI6MTcxOTI0ODQzNn0.3eBSmI3E-CqJRdXCNN6lZGK_BC0t0t-q8tUn2q5Qivw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/feelings/setUserToFeel?feelId=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"feelings",
+								"setUserToFeel"
+							],
+							"query": [
+								{
+									"key": "feelId",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "updateTasks",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/tasks/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"update"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddTasks",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZWVoYW55QGdtYWlsLmNvbSIsImV4cCI6MTcxNjIyODEyNCwiaWF0IjoxNzE2MjE3MzI0fQ.AkC_5AhZSLkNhSngIIJTbcURzDrucRwSt-TK0ngopr0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":[\r\n       \"item 5\",\r\n       \"item 6\",\r\n       \"item 7\",\r\n       \"item 8\"\r\n     ],\r\n    \"date\":\"2022-12-31\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/tasks/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTasks",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/tasks/delete?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTask",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/tasks/deleteTask?id&index",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"deleteTask"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null
+								},
+								{
+									"key": "index",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/tasks/getTasks?id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"getTasks"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllTasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/tasks/getAllTasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"getAllTasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTasksToday",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZWhhbUVsbmFneUBnbWFpbC5jb20iLCJleHAiOjE3MTk1NzI3MDgsImlhdCI6MTcxOTU2MTkwOH0.gQuRB-nZ29FSX9mNk1xBpAXGDUrqG92VgnHkwxVs4MU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\":\"2024-06-27\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/tasks/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AdminChallenge",
+			"item": [
+				{
+					"name": "AddChallenge",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"icon1\":\"vdgcjqh\",\r\n    \"icon2\":\"vdgcjqh\",\r\n    \"name\":\"sports\",\r\n    \"description\":\"asdfgjnbvcxsdeertryhbgv\",\r\n    \"adminCDays\":[\r\n        {\r\n            \"name\":\"firstday\",\r\n            \"file\":\"vgcdjv\",\r\n            \"content\":\"dvshjcjkwca vkbvadb\"\r\n        },\r\n        {\r\n            \"name\":\"firstday\",\r\n            \"file\":\"vgcdjv\",\r\n            \"content\":\"dvshjcjkwca vkbvadb\"\r\n        },\r\n        {\r\n            \"name\":\"firstday\",\r\n            \"file\":\"vgcdjv\",\r\n            \"content\":\"dvshjcjkwca vkbvadb\"\r\n        }\r\n    ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/adminChallenge/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"adminChallenge",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteChallenge",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/adminChallenge/delete?ChallengeId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"adminChallenge",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "ChallengeId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateChallenge",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/adminChallenge/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"adminChallenge",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findChallenge",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/adminChallenge/findChallenge?ChallengeId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"adminChallenge",
+								"findChallenge"
+							],
+							"query": [
+								{
+									"key": "ChallengeId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllChallenge",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/adminChallenge/findAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"adminChallenge",
+								"findAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/adminChallenge/search?search=spo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"adminChallenge",
+								"search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "spo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllCAUser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZWhhbUBnbWFpbC5jb20iLCJleHAiOjE3MTkyNTkyMzYsImlhdCI6MTcxOTI0ODQzNn0.3eBSmI3E-CqJRdXCNN6lZGK_BC0t0t-q8tUn2q5Qivw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/adminChallenge/findAllCAUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"adminChallenge",
+								"findAllCAUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "setUserToAdmin",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZWhhbUBnbWFpbC5jb20iLCJleHAiOjE3MTkyNTkyMzYsImlhdCI6MTcxOTI0ODQzNn0.3eBSmI3E-CqJRdXCNN6lZGK_BC0t0t-q8tUn2q5Qivw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/adminChallenge/setUserToAdmin?ChallengeId=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"adminChallenge",
+								"setUserToAdmin"
+							],
+							"query": [
+								{
+									"key": "ChallengeId",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCR",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "      {    \r\n            \"id\": 3,\r\n            \"rate1\": 0.25,\r\n            \"done1\": false,\r\n            \"days\": [\r\n                {\r\n                   \r\n                    \"rate2\": 0.0,\r\n                    \"done2\": false\r\n                },\r\n                {\r\n                    \r\n                    \"rate2\": 0.0,\r\n                    \"done2\": false\r\n                },\r\n                {\r\n                    \r\n                    \"rate2\": 0.0,\r\n                    \"done2\": false\r\n                },\r\n                {\r\n                 \r\n                    \"rate2\": 0.0,\r\n                    \"done2\": false\r\n                },\r\n                {\r\n                   \r\n                    \"rate2\": 0.0,\r\n                    \"done2\": false\r\n                },\r\n                {\r\n                    \r\n                    \"rate2\": 0.0,\r\n                    \"done2\": false\r\n                },\r\n                {\r\n                    \r\n                    \"rate2\": 0.0,\r\n                    \"done2\": false\r\n                },\r\n                {\r\n                    \r\n                    \"rate2\": 0.0,\r\n                    \"done2\": false\r\n                }\r\n            ]\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/adminChallenge/updateRC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"adminChallenge",
+								"updateRC"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserChallengePublic",
+			"item": [
+				{
+					"name": "AddChallenge",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "deleteChallenge",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/UserChallengePublic/delete?ChallengeId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"UserChallengePublic",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "ChallengeId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateChallenge",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/UserChallengePublic/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"UserChallengePublic",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findChallenge",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/UserChallengePublic/findChallenge?ChallengeId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"UserChallengePublic",
+								"findChallenge"
+							],
+							"query": [
+								{
+									"key": "ChallengeId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllChallenge",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/UserChallengePublic/findAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"UserChallengePublic",
+								"findAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/UserChallengePublic/search?search=spo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"UserChallengePublic",
+								"search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "spo"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserChallengePrivate",
+			"item": [
+				{
+					"name": "AddChallenge",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/userChallengePrivate/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"userChallengePrivate",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteChallenge",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/userChallengePrivate/delete?ChallengeId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"userChallengePrivate",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "ChallengeId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateChallenge",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/userChallengePrivate/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"userChallengePrivate",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findChallenge",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/adminChallenge/findChallenge?ChallengeId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"adminChallenge",
+								"findChallenge"
+							],
+							"query": [
+								{
+									"key": "ChallengeId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllChallenge",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/userChallengePrivate/findAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"userChallengePrivate",
+								"findAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/userChallengePrivate/search?search=spo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"userChallengePrivate",
+								"search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "spo"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Habits",
+			"item": [
+				{
+					"name": "AddHabits",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":[\"jghghghfg\"\r\n    ,\"hfgfdg\"],\r\n    \"startDate\":\"25-5-2023\",\r\n    \"endDate\":\"24-6-2023\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/habits/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"habits",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateHabits",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/habits/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"habits",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteHabits",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/habits/delete?id=9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"habits",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getHabits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/habits/getHabits",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"habits",
+								"getHabits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllHabits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/habits/getAllHabits",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"habits",
+								"getAllHabits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteHabit",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/habits/deleteHabit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"habits",
+								"deleteHabit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getHabitsToday",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZWhhbUVsbmFneUBnbWFpbC5jb20iLCJleHAiOjE3MTk1NzI3MDgsImlhdCI6MTcxOTU2MTkwOH0.gQuRB-nZ29FSX9mNk1xBpAXGDUrqG92VgnHkwxVs4MU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\":\"2024-06-27\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/habits/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"habits",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "AddPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/posts/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePost",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"id\": 1,\r\n        \"content\": \"fdsaa ffddd ghh\",\r\n        \"like\": 1,\r\n        \"disLike\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/posts/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePost",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/posts/delete?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/posts/getPost?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"getPost"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPosts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/posts/getAllPosts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"getAllPosts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateContent",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1 ,\r\n    \"content\":\"ayHaggga elmohem nekhlas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/posts/updateContent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"updateContent"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ContactUs",
+			"item": [
+				{
+					"name": "AddContact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"reham hany\",\r\n    \"message\":\"perfect :)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/contactUs/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"contactUs",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllContactUs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/contactUs/findAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"contactUs",
+								"findAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteContact",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/contactUs/delete?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"contactUs",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Evaluation",
+			"item": [
+				{
+					"name": "getEvaluate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/evaluate/getEvaluate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"evaluate",
+								"getEvaluate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
